@@ -1,0 +1,15 @@
+{% extends 'jordelcaalumnosBundle::main.html.twig' %}
+{% block title %}
+	Alumnos
+{% endblock %}
+{% block contenido %}
+	<h1>Listado de alumnos</h1>
+	{% for alumno in alumnos %}
+		<a href="{{url('jordelcaalumnos_alumno',{'id':alumno.id})}}" class="fila {{cycle(['par','impar'],loop.index)}}">{{alumno.id}} - {{alumno.nombre | capitalize}} {{alumno.apellido | capitalize}}</a>
+	{% endfor %}
+{% endblock %}
+{% block sidebar %}
+	Reemplazo
+	{{parent()}}
+{% endblock %}
+

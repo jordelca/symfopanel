@@ -1,0 +1,20 @@
+{% extends '::base.html.twig' %}
+{% block title %}
+	Main
+{% endblock %}
+{% block stylesheets %}
+	<link href="{{ asset('css/main.css') }}" type="text/css" rel="stylesheet"/>
+{% endblock %}
+{% block body %}
+	<div id="pagina" class="cfix">
+		<div id="contenido">
+			{% block contenido %}
+			{% endblock %}
+		</div>
+		<div id="sidebar">
+			{% block sidebar %}
+				<img src="{{ asset('img/logo.png') }}"/>
+			{% endblock %}
+		</div>
+	</div>
+{% endblock %}

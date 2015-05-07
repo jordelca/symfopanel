@@ -1,0 +1,47 @@
+<h1>Ejemplos con TWIG</h1>
+<p>
+	{% for i in 0..10 %}
+	    * {{ i }}
+	{% endfor %}
+</p>
+
+
+Fecha de hoy: {{"now" | date("d/m/y") }}</p>
+
+{% set fruits = ['apple', 'orange', 'citrus'] %}
+
+{% for i in 0..10 %}
+    {{ cycle(fruits, i) }}
+{% endfor %}
+
+{% set start_year = date() | date('Y') %}
+{% set end_year = start_year + 5 %}
+
+<br>
+
+{% for year in start_year..end_year %}
+    {{ cycle(['odd', 'even'], loop.index0) }}
+{% endfor %}
+
+<p>
+	{% for i in 0..10 %}
+	    * {{ i }}
+	{% endfor %}
+</p>
+
+
+{% set count = 0 %}
+
+{% transchoice count %}
+    {0} There are no apples|{1} There is one apple|]1,Inf] There are %count% apples
+{% endtranschoice %}
+	
+
+{% set count = 1 %}
+
+{% transchoice count %}
+    {0} There are no apples|{1} There is one apple|]1,Inf] There are %count% apples
+{% endtranschoice %}
+
+
+{% trans %}Hello{% endtrans %}

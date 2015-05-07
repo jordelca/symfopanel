@@ -1,0 +1,8 @@
+{% extends 'jordelcaalumnosBundle::main.html.twig' %}
+{% block title %}
+	Detalles de {{alumno.nombre | capitalize}} {{alumno.apellido | capitalize}}
+{% endblock %}
+{% block contenido %}
+<h1>Detalles del alumno</h1>
+	<div>{{alumno.id}} - {{alumno.nombre | capitalize}} {{alumno.apellido | capitalize}}</div>
+{% endblock %}

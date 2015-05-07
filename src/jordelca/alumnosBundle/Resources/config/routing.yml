@@ -1,0 +1,25 @@
+jordelcaalumnos_homepage:
+    path:     /{_locale}/hello/{name}
+    defaults: { _controller: jordelcaalumnosBundle:Default:index, _locale: en }
+    requirements:
+        _locale: en|es|vl
+jordelcaalumnos_alumnos:
+    path:     /{_locale}/alumnos
+    defaults: { _controller: jordelcaalumnosBundle:Default:alumnos, _locale: en }
+    requirements:
+        _locale: en|es|vl
+jordelcaalumnos_alumno:
+    path:     /{_locale}/alumno/{id}
+    defaults: { _controller: jordelcaalumnosBundle:Default:alumno, _locale: en }
+    requirements:
+        _locale: en|es|vl
+jordelcaalumnos_nuevo:
+    path:     /{_locale}/nuevo
+    defaults: { _controller: jordelcaalumnosBundle:Default:nuevo, _locale: en }
+    requirements:
+        _locale: en|es|vl
+jordelcaalumnos_twig:
+    path:     /{_locale}/twig
+    defaults: { _controller: jordelcaalumnosBundle:Default:twig, _locale: en }
+    requirements:
+        _locale: en|es|vl
